@@ -60,8 +60,8 @@ public class HelloController {
 
             if(!getUserCity.equals("")) { // Если данные не пустые
                 // Получаем данные о погоде с сайта openweathermap
-                String output = getUrlContent("http://api.openweathermap.org/data/2.5/weather?q=" + getUserCity + "&appid=d6bd60d335cc600ec236bfa9253a21d2&units=metric");
-
+                String output = getUrlContent("http://api.openweathermap.org/data/2.5/weather?q=" + getUserCity + "&appid=YOUR_KEY&units=metric");
+                //System.out.println(output);
                 if (!output.isEmpty()) { // Нет ошибки и такой город есть
                     JSONObject obj = new JSONObject(output);
                     // Обрабатываем JSON и устанавливаем данные в текстовые надписи
